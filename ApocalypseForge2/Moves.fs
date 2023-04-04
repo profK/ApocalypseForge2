@@ -8,8 +8,6 @@ let moveNames =
     moves.Moves
     |> Seq.map (fun move -> move.Name)
 
-let getMove movename =
+let find_move (inp:string) =
     moves.Moves
-    |> Seq.find (fun move -> move.Name=movename)
-
-
+    |> Seq.tryFind(fun move -> move.Name.ToLower().StartsWith(inp.ToLower()))
