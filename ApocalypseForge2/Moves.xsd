@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:element name="Moves">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                <xs:element name="Move">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Description"> </xs:element>
+                            <xs:element name="CriticalFailure">
+                                <xs:complexType>
+                                    <xs:sequence maxOccurs="1">
+                                        <xs:element name="Description"/>
+                                        <xs:element name="Options">
+                                            <xs:complexType>
+                                                <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                                                  <xs:element name="Option"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Failure">
+                                <xs:complexType>
+                                    <xs:all maxOccurs="1">
+                                        <xs:element name="Description"/>
+                                        <xs:element name="Options">
+                                            <xs:complexType>
+                                                <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                                                  <xs:element name="Option"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="PartialSuccess">
+                                <xs:complexType>
+                                    <xs:all maxOccurs="1">
+                                        <xs:element name="Description"/>
+                                        <xs:element name="Options">
+                                            <xs:complexType>
+                                                <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                                                  <xs:element name="Option"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="FullSuccess">
+                                <xs:complexType>
+                                    <xs:all maxOccurs="1">
+                                        <xs:element name="Description"/>
+                                        <xs:element name="Options">
+                                            <xs:complexType>
+                                                <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                                                  <xs:element name="Option"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="CriticalSuccess">
+                                <xs:complexType>
+                                    <xs:all maxOccurs="1">
+                                        <xs:element name="Description"/>
+                                        <xs:element name="Options">
+                                            <xs:complexType>
+                                                <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                                                  <xs:element name="Option"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="Name" type="xs:string" use="required"/>
+                        <xs:attribute name="Statistic" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

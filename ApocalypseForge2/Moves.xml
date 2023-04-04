@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Moves xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file:/D:/projects/RiderProjects/ApocalypseForge/ApocalypseForge/Moves.xsd">
+  <Move Name="Act With Confidence" Statistic="confidence">
+    <Description>
+    When you attempt to act with confidence, roll confidence
+    </Description>
+    <CriticalFailure>
+      <Description>
+        Not only does the actor fail to impress the target of their point of view, but the target thinks they are a phony. The actor has -1D6 to any attempts to convince or manipulate the target of anything until they end of the episode
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        The actor totally fails to impress the tagret. Mark an exp on Skills
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        The actor has a limited success. The target is swayed by the actor's confidence and the actor the actor takes +1D6 to their next attempt to manipulate or convince the target. However the target may chose one of the following:
+      </Description>
+      <Options>
+        <Option>
+        Still uncertain. The actor must add to their argument but take +1D6 to all further attempts to convince the target of this one thing.
+        </Option>
+        <Option>
+        The target thinks the actor is fill of themselves. The actor's +1D6 is nullified and the target takes 2 points of stress from social consequences.
+        </Option>
+        <Option>
+        The target will go along with the target, but they expect a favor down the line. The target gets 1 bond with you
+        </Option>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        The actor impresses the target with their confidence. The actor takes +1D6 to their next attempt to manipulate or convince the target.
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        The target accepts the actor as a leader. The actor takes +1D6 to their next attempt to manipulate or convince the target and gains 1 bond with the target.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Avoid Harm" Statistic="athletics">
+    <Description>
+    *When you try to avoid physical harm, you roll athletics*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        Actor takes a severe harm.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        Actor takes a medium harm. Mark an exp on Talents
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        Actor takes a light harm. Target may also choose one of the following:
+      </Description>
+      <Options>
+        <Option>
+        Reposition. Actor takes -1D6 to their next Harm or Avoid Harm roll
+        </Option>
+        <Option>
+        Weak counter, target takes a light harm
+        </Option>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        Actor takes no harm
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        Defense and reposte.  Actor takes no harm. target takes a medium harm.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name=" Convince " Statistic="manipulation">
+    <Description>
+    When you attempt to convince someone, roll manipulation.
+    </Description>
+    <CriticalFailure>
+      <Description>
+        Not only does the actor fail to convince the target of their point of view, but the targets are now skeptical of anything they say. The actor has -1D6 to any attempts to convince them of anything until they end of the episode
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        The actor totally fails to convince the tagret. Mark an exp on Skills
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        The actor has a limited success. The target is swayed by the actor's words but can chose one of the following:
+      </Description>
+      <Options>
+        <Option>
+        Still uncertain. The actor must add to their argument but take +1D6 to all further attempts to convince the target of this one thing.
+        </Option>
+        <Option>
+        The target rejects the actor's argument argument and take 2 points of stress from cognitive dissonance.
+        </Option>
+        <Option>
+        The target will do or believe as you suggest, but expect a favor down the line. The target gets 1 bond with you
+        </Option>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        The target totally buys the actor's argument and should act accordingly.
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        Not only does the target buy the actor's argument, but they look to you for leadership. Take +1 bond with them.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Difficult Communication" Statistic="communication">
+    <Description>
+    *When you try to communicate under difficult circumstances, roll communication.*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        Not only does the actor fail to communicate but the target gets an incorrect, or even insulting, impression of what the actor ius trying to communicate. The actor loses one bond with the target. If the actor has bonds with the target, they lose one bond with anyone the target chooses who the target has a bond with.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        The actor totally fails to communicate. Mark an exp on Skills
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        The actor has limited success. Choose 6 words to communicate what you are trying to say.
+      </Description>
+      <Options>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        The actor can talk in the clear with the other person. They can ask you questions and you can answer them.
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        Not only the actor talk in the clear like in Full Success but the target also takes +1D6 forward on their next action they take based on your information.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Express" Statistic="creativity">
+    <Description>
+    *When you try to express yourself through creation, you roll** ***creativity*****.*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        Not only does the actor fail to communicate but the target gets an incorrect, or even insulting, impression of what you are trying to communicate. You lose one bond with the target. If you have no bonds with them, you lose one bond with anyone the target chooses who the target has a bond with.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        The actor totally fails to communicate. Mark an exp on Talents
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        The actor has a limited success. Choose 6 words to communicate what you are trying to say.
+      </Description>
+      <Options>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        The actor takes +1D6 foward on their next attempt to impress, communicate or manipulate the target
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        Not only does the actor take +1D6 forward on their next attempt to impress, communicate or manipulate the target, but they also take one bond with the target.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Figure Something Out" Statistic="brains">
+    <Description>
+    *When you try to figure something out you roll** ***brains*****.*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        The actor is completely flummoxed. The actor takes -1D6 to any further attempts to figure this out.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        The actor learns nothing. Mark an exp on Talents
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        The actor may ask 3 yes or no questions about the situation.
+      </Description>
+      <Options>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        The actor may ask any questions they like about the situation
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        In addition to a full success, the actor takes +1d6 forward to your next action that uses the information discovered.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Harm" Statistic="athletics">
+    <Description>
+    *When you try to physically harm someone, you roll** ***athletics*****.*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        Impressive counter attack! Actor takes a severe harm.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        Miss and reposte. Actor takes a medium harm. Mark an exp on Talents
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        Target takes a medium harm. Target may also chose one of the following:
+      </Description>
+      <Options>
+        <Option>
+        Their guard is up, -1d6 to the next Harm or Avoid Harm roll against this target.
+        </Option>
+        <Option>
+        Weak counter, actor takes a light harm
+        </Option>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        Target takes a medium harm.
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        Target takes a severe harm.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Impress With Intelligence" Statistic="brains">
+    <Description>
+    *When you try to impress someone with your intelligence you roll** ***brains*****.*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        The actor is clearly not the smartest guy in the room. The actor takes -1D6 on going to any attempt to convince anyone of anything this scene.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        They aren't impressed. Mark an exp on Talents
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        The actor establish their intelligence and takes +1D6 to convince the target of something. But the target can chose one of the following:
+      </Description>
+      <Options>
+        <Option>
+        The target thinks the actor is an ass, the actor loses one bond with the target or, if they have no bonds with the target, loses one bound with the target's choice of another character who the target has a bond with.
+        </Option>
+        <Option>
+        The target resents the actor's intelligence. The actor's +1D6 is nullified and the target takes 2 stress .
+        </Option>
+        <Option>
+        The target is willing to listen and respond favorably but expects something for their support. The target gains 1 bond with the actor.
+        </Option>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        The actor takes +1D6 to their next attempt to convince the target of something.
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        In addition to a full success, you take +1d6 forward to your next action that uses the information discovered.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Inspire" Statistic="creativity">
+    <Description>
+    *When you try to inspire someone with your creativity, you roll** ***creativity*****.*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        Lame. Actor loses one bond with the target or, if the actor has no bonds with the target, they lose a bond with another person the target chooses that the target has a bond with.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        The target isn't inspired. No effect but mark one experience in Talents.
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        The target is inspired and gets +1D6 to their next move, but the actor must chose one of the following:
+      </Description>
+      <Options>
+        <Option>
+        The inspiration was strenuos, the actor takes 2 stress.
+        </Option>
+        <Option>
+        The actor is drained, they take -1D6 to their next move.
+        </Option>
+        <Option>
+        TBA
+        </Option>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        The target is inspired. They get +1D6 to their next move.
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        The target is filled with determination. They get +1D6 ongoing til the end of the scene.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Intimidate" Statistic="athletics">
+    <Description>
+    *When you try to physically intimidate someone, you roll** ***athletics*****.*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        Someone else in the room has clearly established a dominant position. The actor takes -1D6 on going to any attempt to intimidate anyone of anything this scene.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        The target isn't impressed. Mark an exp on Talents
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        The actor takes +1D6 to your their next attempt to manipulate the target. But the target gets to chose one of the following:
+      </Description>
+      <Options>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        The actor takes +1D6 to their next attempt to manipulate the target.
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        In addition to a full success, the actor makes a lasting impression on the target. The actor take 1 bond with the target.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Keep Your Head" Statistic="control">
+    <Description>
+    *When you attempt to resist your emotions and stay calm, roll** ***control*****.*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        Not only does the actor fail to impress the target with their leadership, but the target thinks they are a crappy leader. The actor loses one bond with the target. If the actor has bonds with the target, they lose one bond with anyone the target chooses who the target has a bond with.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        The actor loses control of theirr emotions. The actor takes +1D6 to their next action if it is very agressive and makes sense. The actor takes -2D6 their next action if it is not. Mark an exp on Skills
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        The actor has a limited success. The actor retains control of their emotiosn but must choose one of the following:
+      </Description>
+      <Options>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        The actor has a full success. They keep control of their emotions.
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        The actor is master of their emotions and acts with supreme calm gaining a +1D6 on their next action.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Lead With Confidence" Statistic="confidence">
+    <Description>
+    *When you lead with confidence, roll** ***confidence*****.*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        Not only does the actor fail to impress the target with their leadership, but the target thinks they are a crappy leader. The actor loses one bond with the target. If the actor has bonds with the target, they lose one bond with anyone the target chooses who the target has a bond with.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        The actor totally fails to impress the targret with their leadership. Mark an exp on Skills
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        The actor has a limited success. The target takes +1D6 to their next attempt to harm or avoid harm but the actor must choose one of the following:
+      </Description>
+      <Options>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        The actor has a full success. The target gets +1D6 on their next attempt to harm or avoid harm.
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        The target accepts the actor as a leader. The actor takes +1D6 to their next attempt to manipulate or convince the target and gains 1 bond with the target.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Over Awe" Statistic="creativity">
+    <Description>
+    *When you try to stop someone in their tracks with your creativity, you roll** ***creativity*****.*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        Lame. Actor loses one bond with the target or, if the actor has no bonds with the target, they lsoe a bond with another person the target chooses that the target has a bond with.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        The target isn't impressed but provides good feedback. No effect but mark one experience in Talents.
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        Actor impresses the target with their effort. Actor takes 1 bond with the target however the target gets to chose one of the following:
+      </Description>
+      <Options>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        Actor truly impresses the target. Actor takes 1 bond with the target .
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        The target feels flattered by the actor's attention. In addition to the bond, the actor gains +1D6 to their next attempt to manipulate, inspire or turn the target on.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Public Display of Affection" Statistic="beauty">
+    <Description>
+    *When you make a PDA with someone, you roll beauty.*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        The character with the higher popularity score receives -1 popularity. Anyone starting a rumor based on this move gets +1D6.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        The character with the higher popularity score receives -1 popularity, but get to mark an exp on Talents. The other does not, regardless of who rolled the dice.
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        The character with the lower popularity score receives +1 popularity. However the character with the higher popularity score gets to chose one of the following:
+      </Description>
+      <Options>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        The character with the lower popularity score receives +1 popularity.
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        Both characters receive +1 popularity.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Public Breakup" Statistic="Control">
+    <Description>
+    *When you fight or breakup with a romantic partner in public, roll Control.*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        Both people recieve -1 to their popularity Anyone starting a rumor based on this move gets +1D6.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        The actor takes -1 to their popularity, but mark an exp for Skills
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        The target gets to chose one of the following:
+      </Description>
+      <Options>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        Both target and actor popularity is unchanged. They both actor and target take +1 bond for each other. (Genuinely staying freneds.)
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        Both target and actor receive +1 to Moral or 1 exp for Skills at their choice, as well a 1 bond with each other, for handling it so well.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Start A Rumor" Statistic="communication">
+    <Description>
+    *When you try to create rumor, roll communication.*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        Not only does the actor fail to start a rumor, but the attempt backfires on them. Mark one reputation chosen by the targets up or down one tick. The chosen reputation and direction must make sense given the situation.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        The rumor fails to stick. Mark an exp on Skills .
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        The rumor sticks, but the actor receives some flak. The targets choose one of the following:
+      </Description>
+      <Options>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        The targets must all adjust one reputation up or down one tick in a way that makes sense.
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        Not only is the rumor a full success, but it results in social leverage. The actor gets 1 bond with every target.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Sharing" Statistic="communication">
+    <Description>
+    *When you share something personal and private with another character, roll communication.*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        It goes sideways. The actor takes another 2 stress.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        No result. mark an exp on Skills
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        The actor gets to make a stress recovery roll. But the target gets to chose one of the following:
+      </Description>
+      <Options>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        The actor gets to make a stress recovery roll.
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        Both target and actor get to make stress recovery rolls.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Shut Someone Down" Statistic="brains">
+    <Description>
+    *When you try to verbally put-down or shut-down another character you roll** ***brains*****.*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        The attempt misfires. The actor looks like a fool. The actor takes -1D6 ongoing on any attempt to manipuate, impress with intelligence, intimidate or roll confidence.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        Water off a duck's back. No effect. Mark an exp on Talents
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        Like full success but the target may chose one of the following additional effects.:
+      </Description>
+      <Options>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        The actor put the target in their place. The target takes -1D6 ongoing on any attempt to manipuate, impress with intelligence, intimidate or roll confidence.
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        In addition to a full success, you the actor gains social leverage with the target and takes 1 bond with them.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Turn Someone On" Statistic="beauty">
+    <Description>
+    *When you try to turn someone on you roll beauty.*
+    </Description>
+    <CriticalFailure>
+      <Description>
+        The actor takes -1d6 forward continuing til the end of the scene to any attempts to convince or manipulate the target.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>
+        The actor takes -1d6 forward to their next attempt to convince or manipulate the target in this scene. Mark an exp on Talents
+      </Description>
+      <Options>
+      </Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>
+        The actor takes 1D6 forward to their next attempt to convince or manipulate the target in this scene. However the target gets to chose one of the following:
+      </Description>
+      <Options>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>
+        The actor takes 1D6 forward to their next attempt to convince or manipulate the target in this scene.
+      </Description>
+      <Options>
+      </Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>
+        The actor takes +1d6 forward continuing til the end of the scene to any attempts to convince or manipulate the target. The actor and target both get +1 bond with each other.
+      </Description>
+      <Options>
+      </Options>
+    </CriticalSuccess>
+  </Move>
+</Moves>
