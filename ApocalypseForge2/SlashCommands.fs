@@ -1,5 +1,6 @@
 ﻿module ApocalypseForge2.SlashCommands
 
+open System.Threading.Tasks
 open DSharpPlus
 open DSharpPlus.Entities
 open DSharpPlus.SlashCommands
@@ -27,6 +28,7 @@ type SlashCommands() =
         |> Async.AwaitTask
         |> ignore
         
+        
     [<SlashCommand("act", "Rolls an action")>]
      member self.acts(ctx:InteractionContext,[<Option("name","action name")>]action,
                       [<Option("pool","dice pool in form Nd6+M")>] pool) =
@@ -37,7 +39,7 @@ type SlashCommands() =
                 .WithColor(rollResult.resultColor)
                 .AddField("Rolls", arrayToCSV(rollResult.rolls))
                 .AddField("Kept", arrayToCSV(rollResult.kept))
-                .AddField("Result",rollResult.result)
+                .AddField("Result",$"{rollResult.result}")
                 .AddField("Result Description:",
                       match rollResult.resultName with
                       | RollResult.CriticalFailure ->
@@ -53,18 +55,29 @@ type SlashCommands() =
                       )
                 .Build()
        
+        InteractionResponseType.DeferredChannelMessageWithSource
+        |> ctx.CreateResponseAsync
+        |> Async.AwaitTask
+        |> ignore
+        
         match parse_pool(pool) with
         | Some dicePool ->
            match find_move(action) with
            |Some themove ->
-               dicePool
-               |> do_roll
-               |> do_move_embed_func themove
-               |> modifyResponseEmbed
-               ()
+               let embed =
+                   dicePool
+                   |> do_roll
+                   |> do_move_embed_func themove
+                   
+               DiscordWebhookBuilder().WithContent("Rolled move "+themove.Name)
+                   .AddEmbed(embed)
+               |> ctx.EditResponseAsync
+               |> Task.WaitAll
            | None ->
-                modifyResponseMessage None ("ApocalypseForge Error: could not match move: "+
-                                            string(cmd.Data.Options.ElementAt(0).Value)) 
+                DiscordWebhookBuilder().WithContent( "ApocalypseForge Error: could not match move: "+action)
+                |> ctx.EditResponseAsync
+                |> Task.WaitAll                      
         | None ->
-           modifyResponseMessage None "ApocalypseForge Error: could not parse pool expression" 
-    
+           DiscordWebhookBuilder().WithContent("ApocalypseForge Error: could not parse pool expression")
+           |> ctx.EditResponseAsync
+           |> Task.WaitAll 

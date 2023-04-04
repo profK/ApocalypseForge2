@@ -21,7 +21,7 @@ type ProcessedRoll =
     struct
         val pool:DicePool
         val resultName:RollResult
-        val resultColor:Color
+        val resultColor:DiscordColor
         val rolls: int array
         val kept:int array
         val result:int
@@ -85,9 +85,9 @@ let do_roll pool  =
             | n when n>9 -> Success
     let resultColor =
         match resultName with
-        | CriticalFailure -> Color.Red
-        | Failure ->Color.DarkRed
-        | PartialSuccess -> Color.DarkGreen
-        | Success -> Color.Green
-        | CriticalSuccess -> Color.Gold
+        | CriticalFailure -> DiscordColor.Red
+        | Failure ->DiscordColor.DarkRed
+        | PartialSuccess -> DiscordColor.DarkGreen
+        | Success -> DiscordColor.Green
+        | CriticalSuccess -> DiscordColor.Gold
     ProcessedRoll(pool,resultName,resultColor,rolls,kept,result)   
