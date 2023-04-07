@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Moves xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="file:/D:/projects/RiderProjects/ApocalypseForge/ApocalypseForge/Moves.xsd">
+       xsi:noNamespaceSchemaLocation="file:/D:/projects/RiderProjects/ApocalypseForge/ApocalypseForge/Moves.xsd">
+
+
   <Move Name="Act With Confidence" Statistic="confidence">
     <Description>
-    When you attempt to act with confidence, roll confidence
+      When you attempt to act with confidence, roll confidence
     </Description>
     <CriticalFailure>
       <Description>
@@ -25,13 +27,13 @@
       </Description>
       <Options>
         <Option>
-        Still uncertain. The actor must add to their argument but take +1D6 to all further attempts to convince the target of this one thing.
+          Still uncertain. The actor must add to their argument but take +1D6 to all further attempts to convince the target of this one thing.
         </Option>
         <Option>
-        The target thinks the actor is fill of themselves. The actor's +1D6 is nullified and the target takes 2 points of stress from social consequences.
+          The target thinks the actor is fill of themselves. The actor's +1D6 is nullified and the target takes 2 points of stress from social consequences.
         </Option>
         <Option>
-        The target will go along with the target, but they expect a favor down the line. The target gets 1 bond with you
+          The target will go along with the target, but they expect a favor down the line. The target gets 1 bond with you
         </Option>
       </Options>
     </PartialSuccess>
@@ -50,9 +52,43 @@
       </Options>
     </CriticalSuccess>
   </Move>
+  <Move Name="Athletic Feat" Statistic="athletics">
+    <Description>
+      When you attempt a feat of physcial strength, roll athletics
+    </Description>
+    <CriticalFailure>
+      <Description> Actor takes a light harm.
+      </Description>
+      <Options></Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>Actor takes 2 stress. </Description>
+      <Options></Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>Actor succeeds in their action but must also
+        choose one of the following</Description>
+      <Options>
+        <Option>Less than ideal. Actor takes 2 stress</Option>
+        <Option>Almost but not quite. Nullify the stress but then
+          actor fails in their action</Option>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>The actor succeeds in the action</Description>
+      <Options></Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>Actor easily succeeds. The Director choose one of the following:</Description>
+      <Options>
+        <Option>They get two ticks on a clock</Option>
+        <Option>They get one tick on a clock but get +1D6 continuing on related actions</Option>
+      </Options>
+    </CriticalSuccess>
+  </Move>
   <Move Name="Avoid Harm" Statistic="athletics">
     <Description>
-    *When you try to avoid physical harm, you roll athletics*
+      *When you try to avoid physical harm, you roll athletics*
     </Description>
     <CriticalFailure>
       <Description>
@@ -74,10 +110,10 @@
       </Description>
       <Options>
         <Option>
-        Reposition. Actor takes -1D6 to their next Harm or Avoid Harm roll
+          Reposition. Actor takes -1D6 to their next Harm or Avoid Harm roll
         </Option>
         <Option>
-        Weak counter, target takes a light harm
+          Weak counter, target takes a light harm
         </Option>
       </Options>
     </PartialSuccess>
@@ -96,9 +132,9 @@
       </Options>
     </CriticalSuccess>
   </Move>
-  <Move Name=" Convince " Statistic="manipulation">
+  <Move Name="Convince " Statistic="manipulation">
     <Description>
-    When you attempt to convince someone, roll manipulation.
+      When you attempt to convince someone, roll manipulation.
     </Description>
     <CriticalFailure>
       <Description>
@@ -120,13 +156,13 @@
       </Description>
       <Options>
         <Option>
-        Still uncertain. The actor must add to their argument but take +1D6 to all further attempts to convince the target of this one thing.
+          Still uncertain. The actor must add to their argument but take +1D6 to all further attempts to convince the target of this one thing.
         </Option>
         <Option>
-        The target rejects the actor's argument argument and take 2 points of stress from cognitive dissonance.
+          The target rejects the actor's argument argument and take 2 points of stress from cognitive dissonance.
         </Option>
         <Option>
-        The target will do or believe as you suggest, but expect a favor down the line. The target gets 1 bond with you
+          The target will do or believe as you suggest, but expect a favor down the line. The target gets 1 bond with you
         </Option>
       </Options>
     </PartialSuccess>
@@ -145,9 +181,37 @@
       </Options>
     </CriticalSuccess>
   </Move>
+  <Move Name="Creative Leap" Statistic="creativity">
+    <Description>Sometimes, logic and reason isn't enough and finding the answers take a gut level intuition. When you want to use your gut, roll creativity</Description>
+    <CriticalFailure>
+      <Description>You go off on a wild, totally distracting tangent. Take -1D6 to any attempt to gain more information in this scene.</Description>
+      <Options></Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>Nah. I got zip.</Description>
+      <Options></Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>The actor has limited success. The actor has an idea and a +1 forward to pursue it, but they must choose one of the following:</Description>
+      <Options>
+        <Option>You're hesitant or embarrassedd to bring it up. Take 2 stress.</Option>
+        <Option>Everyone else thinks it's silly or dumb. Take -1d6 to convince them to help you with it.</Option>
+        <Option>A person you need to help you follow up is doubtful, you need to give them 1 bond with you to get their aid</Option>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>Thats not a bad idea! The next person to act on it is at +1 forward
+        to follow up.</Description>
+      <Options></Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>That's a great idea! Everyone is at +1 continuing to follow up on it.</Description>
+      <Options></Options>
+    </CriticalSuccess>
+  </Move>
   <Move Name="Difficult Communication" Statistic="communication">
     <Description>
-    *When you try to communicate under difficult circumstances, roll communication.*
+      *When you try to communicate under difficult circumstances, roll communication.*
     </Description>
     <CriticalFailure>
       <Description>
@@ -187,7 +251,7 @@
   </Move>
   <Move Name="Express" Statistic="creativity">
     <Description>
-    *When you try to express yourself through creation, you roll** ***creativity*****.*
+      *When you try to express yourself through creation, you roll** ***creativity*****.*
     </Description>
     <CriticalFailure>
       <Description>
@@ -227,7 +291,7 @@
   </Move>
   <Move Name="Figure Something Out" Statistic="brains">
     <Description>
-    *When you try to figure something out you roll** ***brains*****.*
+      *When you try to figure something out you roll** ***brains*****.*
     </Description>
     <CriticalFailure>
       <Description>
@@ -267,7 +331,7 @@
   </Move>
   <Move Name="Harm" Statistic="athletics">
     <Description>
-    *When you try to physically harm someone, you roll** ***athletics*****.*
+      *When you try to physically harm someone, you roll** ***athletics*****.*
     </Description>
     <CriticalFailure>
       <Description>
@@ -289,10 +353,10 @@
       </Description>
       <Options>
         <Option>
-        Their guard is up, -1d6 to the next Harm or Avoid Harm roll against this target.
+          Their guard is up, -1d6 to the next Harm or Avoid Harm roll against this target.
         </Option>
         <Option>
-        Weak counter, actor takes a light harm
+          Weak counter, actor takes a light harm
         </Option>
       </Options>
     </PartialSuccess>
@@ -313,7 +377,7 @@
   </Move>
   <Move Name="Impress With Intelligence" Statistic="brains">
     <Description>
-    *When you try to impress someone with your intelligence you roll** ***brains*****.*
+      *When you try to impress someone with your intelligence you roll** ***brains*****.*
     </Description>
     <CriticalFailure>
       <Description>
@@ -335,13 +399,13 @@
       </Description>
       <Options>
         <Option>
-        The target thinks the actor is an ass, the actor loses one bond with the target or, if they have no bonds with the target, loses one bound with the target's choice of another character who the target has a bond with.
+          The target thinks the actor is an ass, the actor loses one bond with the target or, if they have no bonds with the target, loses one bound with the target's choice of another character who the target has a bond with.
         </Option>
         <Option>
-        The target resents the actor's intelligence. The actor's +1D6 is nullified and the target takes 2 stress .
+          The target resents the actor's intelligence. The actor's +1D6 is nullified and the target takes 2 stress .
         </Option>
         <Option>
-        The target is willing to listen and respond favorably but expects something for their support. The target gains 1 bond with the actor.
+          The target is willing to listen and respond favorably but expects something for their support. The target gains 1 bond with the actor.
         </Option>
       </Options>
     </PartialSuccess>
@@ -362,7 +426,7 @@
   </Move>
   <Move Name="Inspire" Statistic="creativity">
     <Description>
-    *When you try to inspire someone with your creativity, you roll** ***creativity*****.*
+      *When you try to inspire someone with your creativity, you roll** ***creativity*****.*
     </Description>
     <CriticalFailure>
       <Description>
@@ -384,13 +448,13 @@
       </Description>
       <Options>
         <Option>
-        The inspiration was strenuos, the actor takes 2 stress.
+          The inspiration was strenuos, the actor takes 2 stress.
         </Option>
         <Option>
-        The actor is drained, they take -1D6 to their next move.
+          The actor is drained, they take -1D6 to their next move.
         </Option>
         <Option>
-        TBA
+          TBA
         </Option>
       </Options>
     </PartialSuccess>
@@ -411,7 +475,7 @@
   </Move>
   <Move Name="Intimidate" Statistic="athletics">
     <Description>
-    *When you try to physically intimidate someone, you roll** ***athletics*****.*
+      *When you try to physically intimidate someone, you roll** ***athletics*****.*
     </Description>
     <CriticalFailure>
       <Description>
@@ -451,7 +515,7 @@
   </Move>
   <Move Name="Keep Your Head" Statistic="control">
     <Description>
-    *When you attempt to resist your emotions and stay calm, roll** ***control*****.*
+      *When you attempt to resist your emotions and stay calm, roll** ***control*****.*
     </Description>
     <CriticalFailure>
       <Description>
@@ -491,7 +555,7 @@
   </Move>
   <Move Name="Lead With Confidence" Statistic="confidence">
     <Description>
-    *When you lead with confidence, roll** ***confidence*****.*
+      *When you lead with confidence, roll** ***confidence*****.*
     </Description>
     <CriticalFailure>
       <Description>
@@ -529,9 +593,36 @@
       </Options>
     </CriticalSuccess>
   </Move>
+  <Move Name="Nonlinear Thinking" Statistic="creativity">
+    <Description>Sometimes you need to think out of the box, when trying to come up with a creative solution to a problemyou roll creativity</Description>
+    <CriticalFailure>
+      <Description>Laughable. The actor loses -1d6 continuingto any attempt to convince anyone of anything for the rest of the scene</Description>
+      <Options></Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>Yeah, no. That won't work</Description>
+      <Options></Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>	The idea has merit, anyone acting on the idea +1D6 to their next move, but the actor must chose one of the following:</Description>
+      <Options>
+        <Option>Spend a bond with whoever is going to implement the solution to convince them.</Option>
+        <Option>This took a lot out of you, take -1D6 forward to your next action</Option>
+        <Option>TBA</Option>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>Smart idea. Anyone acting on the idea get +1D6 to their next move.</Description>
+      <Options></Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>A breakthrough. Anyone acting on the idea get +1D6 continuing for the rest of the scene.</Description>
+      <Options></Options>
+    </CriticalSuccess>
+  </Move>
   <Move Name="Over Awe" Statistic="creativity">
     <Description>
-    *When you try to stop someone in their tracks with your creativity, you roll** ***creativity*****.*
+      *When you try to stop someone in their tracks with your creativity, you roll** ***creativity*****.*
     </Description>
     <CriticalFailure>
       <Description>
@@ -571,7 +662,7 @@
   </Move>
   <Move Name="Public Display of Affection" Statistic="beauty">
     <Description>
-    *When you make a PDA with someone, you roll beauty.*
+      *When you make a PDA with someone, you roll beauty.*
     </Description>
     <CriticalFailure>
       <Description>
@@ -611,7 +702,7 @@
   </Move>
   <Move Name="Public Breakup" Statistic="Control">
     <Description>
-    *When you fight or breakup with a romantic partner in public, roll Control.*
+      *When you fight or breakup with a romantic partner in public, roll Control.*
     </Description>
     <CriticalFailure>
       <Description>
@@ -651,7 +742,7 @@
   </Move>
   <Move Name="Start A Rumor" Statistic="communication">
     <Description>
-    *When you try to create rumor, roll communication.*
+      *When you try to create rumor, roll communication.*
     </Description>
     <CriticalFailure>
       <Description>
@@ -691,7 +782,7 @@
   </Move>
   <Move Name="Sharing" Statistic="communication">
     <Description>
-    *When you share something personal and private with another character, roll communication.*
+      *When you share something personal and private with another character, roll communication.*
     </Description>
     <CriticalFailure>
       <Description>
@@ -731,7 +822,7 @@
   </Move>
   <Move Name="Shut Someone Down" Statistic="brains">
     <Description>
-    *When you try to verbally put-down or shut-down another character you roll** ***brains*****.*
+      *When you try to verbally put-down or shut-down another character you roll** ***brains*****.*
     </Description>
     <CriticalFailure>
       <Description>
@@ -771,7 +862,7 @@
   </Move>
   <Move Name="Turn Someone On" Statistic="beauty">
     <Description>
-    *When you try to turn someone on you roll beauty.*
+      *When you try to turn someone on you roll beauty.*
     </Description>
     <CriticalFailure>
       <Description>
@@ -792,6 +883,9 @@
         The actor takes 1D6 forward to their next attempt to convince or manipulate the target in this scene. However the target gets to chose one of the following:
       </Description>
       <Options>
+        <Option>The target takes 1 bond with the actor</Option>
+        <Option>The actor needs to follow through with an appropriate physical action or their 1D6 is nullified</Option>
+        <Option>The target embarrassed, the actor's 1D6 is nullified and the target marks 2 stress</Option>
       </Options>
     </PartialSuccess>
     <FullSuccess>
@@ -807,6 +901,306 @@
       </Description>
       <Options>
       </Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Frighten" Statistic="weird">
+    <Description>When you deliberately try to scare someone by using your unnatural nature, you roll weird.</Description>
+    <CriticalFailure>
+      <Description> The target isn't impressed. </Description>
+      <Options></Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>The target isn't impressed.</Description>
+      <Options></Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>The taget is disturbed. Take +1D6 to the actor's next attempt to intimidate the target.
+        But the target can chose one of the following:</Description>
+      <Options>
+        <Option>The target is scared of the actor, the actor loses one bond with the target or, if they have no bonds with the target, loses one bound with the
+          target's choice of another character who the target has a bond with. </Option>
+        <Option>The target exerts self-control. The actor's +1D6 is nullified and the target
+          takes 2 stress.</Option>
+        <Option>The target is cowed but so afraid of the target that any attempt by the actor to communicate with the target is
+          considered "difficult communication".</Option>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>The actor takes +1D6 to their next attempt to intimidate the target.</Description>
+      <Options></Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>In addition to a full success the target will not take an agressive
+        action of any type toward the actor or their allies for any reason</Description>
+      <Options></Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Resist Hesitation" Statistic="control">
+    <Description>You have encountered something bizzare or terrifying,
+      roll control not to be overwhelmed by it.</Description>
+    <CriticalFailure>
+      <Description>The actor is frozen. They must make a successful control
+        action before they can do anything else.
+      </Description>
+      <Options></Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>The actor hesitates. Every other character must have a chance to initiate a
+        do an action before they can initae one. </Description>
+      <Options></Options>
+    </Failure>
+    <PartialSuccess>
+      <Description> The actor may take an action but must choose one of the following first:</Description>
+      <Options>
+        <Option>It takes an exertion of will, the actor takes 2 stress .</Option>
+        <Option>The actor is off their game, -1d6 to the next action they take.</Option>
+        <Option>Another character assists them past their hesitation, that character
+          gets 1 bond with the actor</Option>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>The actor may act as normal</Description>
+      <Options></Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>The actor rallies, they take +1D6 to their next
+        action.</Description>
+      <Options></Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Repent" Statistic="mundanity">
+    <Description>Repentance is a downtime move. To repent you must do more than just feel sorry or guilty,
+      you must actively try to repair some damage you have done to someone else. The better you fit into
+      normal society, the easier this is to do.</Description>
+    <CriticalFailure>
+      <Description>The actor makes a public mess of it, the actor takes -1 tick to their popularity
+        measure.</Description>
+      <Options></Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>The target doesn't believe you are sincere. Nothing happens.</Description>
+      <Options></Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>The target is unsure of the actor's sincerity. The actor takes -1 tick to their corruption
+        but must choose one of the following as well:</Description>
+      <Options>
+        <Option>The actor embarrasses themselves in public and takes -1 tick to popularity.</Option>
+        <Option>The repentance was difficult for the actor, they take 2 stress .</Option>
+        <Option>The target feels they actor stills “owes them” and gets 1 bond with the actor.</Option>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>The target feels they actor stills “owes them” and gets 1 bond with the actor.</Description>
+      <Options></Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>In addition to a full success, the target is so impressed that the actor gets
+        1 bond with the target</Description>
+      <Options></Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Resist Fear" Statistic="resistance">
+    <Description>When you attempt to resist existential dread, you roll resistance.</Description>
+    <CriticalFailure>
+      <Description>The actor is petrified and has to make a successful keep your head roll to make
+        any moves in this scene.</Description>
+      <Options></Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>The actor is scared and takes -1D6 to their next Keep Your Head roll.</Description>
+      <Options></Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>he actor resists existential dread. But the target can choose one of the following :</Description>
+      <Options>
+        <Option>The actor must roll a resist hesitation action before their next move
+        </Option>
+        <Option>The actor had to exert an effort of will and takes 2 stress.</Option>
+        <Option>TBA</Option>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>The actor takes no penalty.</Description>
+      <Options></Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>The actor is immune to the Resist Fear move for the rest of the scene.</Description>
+      <Options></Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Resist Temptation" Statistic="resistance">
+    <Description>When you attempt to resist temptation in a horror situation, you roll resistance."
+    </Description>
+    <CriticalFailure>
+      <Description>The actor gives in to temptation. Take -1D6 on going to control based moves in the rest of this scene, and +1 tick of corruptiontions>
+      </Description>
+      <Options></Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>You are tempted. Take -1D6 to your next control based move. If you fail that move then mark +1 tick of corruption in addition to the
+        effects of failure.</Description>
+      <Options></Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>The actor resists temptation, but the actor takes 2 stress.</Description>
+      <Options></Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>You can roll control normally.</Description>
+      <Options></Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>In addition to a full success, you take 1D6 forward to any further resist
+        temptation rolls with the same target.</Description>
+      <Options></Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Sense Supernatural" Statistic="instinct">
+    <Description>Supernatural creatures often have a sixth sense for other supernatural powers
+      and creatures. This is represented by their
+      instinct talent.</Description>
+    <CriticalFailure>
+      <Description>The actor is totally clueless. The actor takes -1D6 to resisting surprise
+        or attack from the supernatural source</Description>
+      <Options></Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>The actor learns nothing.</Description>
+      <Options></Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>The actor may ask 3 yes or no questions about the supernatural source.</Description>
+      <Options></Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>The actor may ask any reasonable questions they like about the supernatural source.</Description>
+      <Options></Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>In addition to a full success, the actor takes +1d6 continuing to all interactions with the
+        supernatural source this scene</Description>
+      <Options></Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Seek Medical Treatment" Statistic="athletics" >
+    <Description>Medical treatment is used to treat harms.
+      When you seek medical treatment, you roll *athletics*.</Description>
+    <CriticalFailure>
+      <Description>The actor fails to heal PLUS they must choose one of the following negative results</Description>
+      <Options>
+        <Option>The treatment is stressful, take 2 stress.</Option>
+        <Option>The injury has psychological effects, take 1 trauma but also mark an additional segment on
+          your healing clock.</Option>
+        <Option>TBA</Option>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>The actor fails to heal.
+      </Description>
+      <Options></Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>The actor ticks one segment on their healing clock, but must choose one of the following additional
+        effects:</Description>
+      <Options>
+        <Option>The treatment is stressful, take 2 stress.</Option>
+        <Option>The injury has psychological effects, take 1 trauma but also mark an additional segment on
+          your healing clock.</Option>
+        <Option>TBA</Option>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>The actor ticks one segment on their healing clock
+      </Description>
+      <Options></Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>he actor ticks two segments on their healing clock</Description>
+      <Options></Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Seek Counseling" Statistic="brains">
+    <Description>Counseling is used to treat traumas. When you seek counseling, you roll *brains*.</Description>
+    <CriticalFailure>
+      <Description>The actor fails to recover PLUS they must chose one of the following negative options</Description>
+      <Options>
+        <Option>The treatment is stressful, take 2 stress.</Option>
+        <Option>The trauma has effects on the actor's health. Take 1 light harm
+          but also mark an additional tick on your recovery clck. </Option>
+        <Option> TBA</Option>
+      </Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>The actor fails to recover.</Description>
+      <Options></Options>
+    </Failure>
+    <PartialSuccess>
+      <Description></Description>
+      <Options>
+        <Option>The treatment is stressful, take 2 stress.</Option>
+        <Option>The trauma has effects on the actor's health. Take 1 light harm
+          but also mark an additional tick on your recovery clck. </Option>
+        <Option> TBA</Option>
+      </Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>The actor ticks one segment on their recovery clock</Description>
+      <Options></Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>The actor ticks two segments on their recovery clock</Description>
+      <Options></Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Organize A Social Activity" Statistic="confidence">
+    <Description>When you organize a social activity for your friends,
+      you all can become closer and they can relieve some stress</Description>
+    <CriticalFailure>
+      <Description>The event is a bomb. Something bad happens at the Director's discretion. (Consider interrupting the event with some kind of crisis.)</Description>
+      <Options></Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>The activity is a dud. Mark an exp on Skills</Description>
+      <Options></Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>The activity is a limited success. The targets recover 2 stress .</Description>
+      <Options></Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>The event is a success. The targets recovers 4 stress . The actor takes +1 bond with
+        every target</Description>
+      <Options></Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>The event is a huge hit. The targets recover all stress . The actor takes +1 bond with the
+        targets and recovers 4 stress .</Description>
+      <Options></Options>
+    </CriticalSuccess>
+  </Move>
+  <Move Name="Perform" Statistic="creativity">
+    <Description>A creative performance can relieve stress both for the performer
+      and the audiance</Description>
+    <CriticalFailure>
+      <Description>Wow did that stink. Nothing went right. Take 2 stress</Description>
+      <Options></Options>
+    </CriticalFailure>
+    <Failure>
+      <Description>	Audiance response was tepid at best. No one got into it, even you</Description>
+      <Options></Options>
+    </Failure>
+    <PartialSuccess>
+      <Description>It wasn't your best performance but not your worst either. The targets recover 2 stress .</Description>
+      <Options></Options>
+    </PartialSuccess>
+    <FullSuccess>
+      <Description>The event is a success. The targets recovers 4 stress . The actor recovers 2 stress</Description>
+      <Options></Options>
+    </FullSuccess>
+    <CriticalSuccess>
+      <Description>This was the night. Everything went perfectly. You could feel the love of the audiance. The targets and actor recover all stress .</Description>
+      <Options></Options>
     </CriticalSuccess>
   </Move>
 </Moves>
