@@ -114,4 +114,19 @@ type SlashCommands() =
          | None ->
            DiscordWebhookBuilder().WithContent("ApocalypseForge Error: could not parse pool expression")
            |> ctx.EditResponseAsync
-           |> Task.WaitAll            
+           |> Task.WaitAll
+           
+    [<SlashCommand("id", "prints user id")>]
+    member self.id(ctx:InteractionContext) =
+        InteractionResponseType.DeferredChannelMessageWithSource
+        |> ctx.CreateResponseAsync
+        |> Async.AwaitTask
+        |> ignore
+        
+        let content =
+            string(ctx.Member.Id)
+            
+        DiscordWebhookBuilder().WithContent(content)
+        |> ctx.EditResponseAsync
+        |> Async.AwaitTask
+        |> ignore     

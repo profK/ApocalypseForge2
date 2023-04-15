@@ -6,6 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Include="Characters.fs" />
         <Compile Include="DicePools.fs" />
         <Compile Include="Moves.fs" />
         <Compile Include="SlashCommands.fs" />
@@ -19,6 +20,7 @@
         <Content Include="Sekrets.json">
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
+        <Compile Include="LMDB.fs" />
     </ItemGroup>
 
     <ItemGroup>
@@ -27,6 +29,7 @@
       <PackageReference Include="DSharpPlus.SlashCommands" Version="4.4.0" />
       <PackageReference Include="FSharp.Data" Version="6.0.1-beta002" />
       <PackageReference Include="FSharp.Json.New" Version="0.4.2" />
+      <PackageReference Include="LightningDB" Version="0.15.0" />
     </ItemGroup>
 
 </Project>
