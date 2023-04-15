@@ -19,6 +19,10 @@ let OpenTransaction(dbname) =
 let  CommitTransaction(txn:Transaction) =
     txn.txn.Commit()
     
+let AbortTransaction(txn:Transaction) =
+    txn.txn.Abort()
+    ()
+    
 let Put (key:string, value:byte[]) (tx:Transaction)  =
     tx.txn.Put(tx.db, System.Text.Encoding.ASCII.GetBytes(key) ,value) |> ignore
     tx
