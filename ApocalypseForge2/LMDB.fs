@@ -1,5 +1,6 @@
 ﻿module ApocalypseForge2.LMDB
 
+open FSharp.Json
 open LightningDB
 
 type Transaction =
@@ -23,15 +24,15 @@ let AbortTransaction(txn:Transaction) =
     txn.txn.Abort()
     ()
     
-let Put (key:string, value:byte[]) (tx:Transaction)  =
+let PutBytes (key:string, value:byte[]) (tx:Transaction)  =
     tx.txn.Put(tx.db, System.Text.Encoding.ASCII.GetBytes(key) ,value) |> ignore
     tx
      
 let PutString (key:string,value:string) (tx:Transaction)  =
-    Put (key,System.Text.Encoding.ASCII.GetBytes(value)) |> ignore
+    PutBytes (key,System.Text.Encoding.ASCII.GetBytes(value)) |> ignore
     tx
  
-let Get (key:string) (tx:Transaction)  =
+let GetBytes (key:string) (tx:Transaction)  =
     tx.txn.Get (tx.db, System.Text.Encoding.ASCII.GetBytes(key))
     |> function
         | (code, k , v ) -> v
@@ -40,3 +41,12 @@ let GetString (key:string) (tx:Transaction)  =
     tx.txn.Get (tx.db, System.Text.Encoding.ASCII.GetBytes(key))
     |> function
         | (code, k , v ) -> string(v)        
+
+let Put<'T>(key:string, value:'T) (tx:Transaction)=
+    let valStr = Json.serialize(value)
+    PutString (key, valStr) tx
+    
+let Get<'T>(key:string) (tx:Transaction) : 'T=
+    let string = GetString key tx
+    Json.deserialize(string)    
+    
